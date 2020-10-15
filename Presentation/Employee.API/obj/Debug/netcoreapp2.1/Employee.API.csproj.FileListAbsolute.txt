@@ -1,0 +1,14 @@
+C:\Code\Presentation\Employee.API\bin\Debug\netcoreapp2.1\Employee.API.deps.json
+C:\Code\Presentation\Employee.API\bin\Debug\netcoreapp2.1\Employee.API.runtimeconfig.json
+C:\Code\Presentation\Employee.API\bin\Debug\netcoreapp2.1\Employee.API.runtimeconfig.dev.json
+C:\Code\Presentation\Employee.API\bin\Debug\netcoreapp2.1\Employee.API.dll
+C:\Code\Presentation\Employee.API\obj\Debug\netcoreapp2.1\Employee.API.csprojAssemblyReference.cache
+C:\Code\Presentation\Employee.API\obj\Debug\netcoreapp2.1\Employee.API.csproj.CoreCompileInputs.cache
+C:\Code\Presentation\Employee.API\obj\Debug\netcoreapp2.1\Employee.API.RazorAssemblyInfo.cache
+C:\Code\Presentation\Employee.API\obj\Debug\netcoreapp2.1\Employee.API.RazorAssemblyInfo.cs
+C:\Code\Presentation\Employee.API\obj\Debug\netcoreapp2.1\Employee.API.AssemblyInfoInputs.cache
+C:\Code\Presentation\Employee.API\obj\Debug\netcoreapp2.1\Employee.API.AssemblyInfo.cs
+C:\Code\Presentation\Employee.API\obj\Debug\netcoreapp2.1\Employee.API.RazorTargetAssemblyInfo.cache
+C:\Code\Presentation\Employee.API\bin\Debug\netcoreapp2.1\Employee.API.pdb
+C:\Code\Presentation\Employee.API\obj\Debug\netcoreapp2.1\Employee.API.dll
+C:\Code\Presentation\Employee.API\obj\Debug\netcoreapp2.1\Employee.API.pdb
