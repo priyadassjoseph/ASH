@@ -5,6 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
+using Employee.API.Services.Contracts;
+using Application.Employee.Queries.GetEmployees;
+using MediatR;
+using Application.Employee.Commands;
 
 namespace Employee.API.Controllers
 {
@@ -19,48 +23,24 @@ namespace Employee.API.Controllers
             _service = service;
             _mapper = mapper;
         }
-        #region GET
-        /// <summary>
-        /// Comments and descriptions can be added to every endpoint using XML comments.
-        /// </summary>
-        /// <remarks>
-        /// XML comments included in controllers will be extracted and injected in Swagger/OpenAPI file.
-        /// </remarks>
-        /// <param name="id"></param>
-        /// <returns></returns>
+        [HttpGet]
+        public async Task<ActionResult<EmployeeVm>> Get()
+        {
+            return await Mediator.Send(new GetEmployeesQuery());
+        }
+
         [HttpGet("{id}")]
-        public async Task<Employee> Get(string id)
+        public async Task<FileResult> Get(int id)
         {
-            var data = await _service.GetAsync(id);
+            var vm = await Mediator.Send(new GetEmployeesQuery { Id = id });
 
-            if (data != null)
-                return _mapper.Map<Employee>(data);
-            else
-                return null;
+            return File(vm.Content, vm.ContentType, vm.FileName);
         }
-        #endregion
 
-        #region POST
         [HttpPost]
-        public async Task<Employee CreateEmployee([FromBody]EmployeeCreationRequest value) //
+        public async Task<ActionResult<int>> Create(CreateEmployeeCommand command)
         {
-
-            //TODO: include exception management policy according to technical specifications
-            if (value == null)
-                throw new ArgumentNullException("value");
-
-            if (value == null)
-                throw new ArgumentNullException("value.Employee");
-
-
-            var data = await _service.CreateAsync(Mapper.Map<S.Employee>(value.Employee));
-
-            if (data != null)
-                return _mapper.Map<Employee>(data);
-            else
-                return null;
-
-        }
-        #endregion
+            return await Mediator.Send(command);
+        }      
     }
 }

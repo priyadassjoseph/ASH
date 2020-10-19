@@ -12,3 +12,4 @@ C:\Code\Presentation\Employee.API\obj\Debug\netcoreapp2.1\Employee.API.RazorTarg
 C:\Code\Presentation\Employee.API\bin\Debug\netcoreapp2.1\Employee.API.pdb
 C:\Code\Presentation\Employee.API\obj\Debug\netcoreapp2.1\Employee.API.dll
 C:\Code\Presentation\Employee.API\obj\Debug\netcoreapp2.1\Employee.API.pdb
+C:\Code\Presentation\Employee.API\bin\Debug\netcoreapp2.1\Employee.API.Services.dll
